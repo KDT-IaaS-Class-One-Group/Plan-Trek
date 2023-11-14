@@ -10,19 +10,21 @@
   <script src="/public/scripts/main.js"></script>
 </head>
 <body>
-  <h1>Plan-Trek</h1>
   <div id="root">
-    <div id="header"></div>
+    <div id="header">
+      <h1>Plan-Trek</h1>
+    </div>
     <div id="container">
       <!-- 일정 목록 추가 -->
       <ul id="taskList">
       </ul>
+    </div>  
+    <div id="footer">
       <form id="taskForm">
         <input type="text" id="taskInput" placeholder="일정 추가">
         <button type="button" onclick="addTask()">추가</button>
       </form>
-    </div>  
-    <div id="footer"></div>
+    </div>
   </div>
 </body>
 </html>

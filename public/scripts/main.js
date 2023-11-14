@@ -21,6 +21,9 @@ function addTask() {
 
     // ul에 li를 자식 요소로 추가
     ul.appendChild(taskLi);
+
+    // 등록하면 입력창을 초기화
+    taskInput.value = '';
   } else {
     console.error('일정 추가가 불가능합니다.')
   }
