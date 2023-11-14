@@ -20,25 +20,26 @@ MVC 패턴은 소프트웨어 디자인 패턴 중 하나로, 소프트웨어를
 Plan-Trek/
 │
 ├── app.js
+│
 ├── routes/
-│ └── route.js
+│   └── route.js
 │
 ├── controllers/
-│ └── [Controller files]
+│   └── [Controller files]
 │
 ├── models/
-│ └── data/
-│ └── myTask.json
+│   └── data/
+│       └── myTask.json
 │
-├── public/
-│ ├── scripts/
-│ │ ├── main.js
-│ │ └── [Other client-side script files]
-│ ├── styles/
-│ │ ├── common.css
-│ │ └── style.css
-│ └── views/
-│ └── index.html
+└── public/
+    ├── scripts/
+    │   ├── main.js
+    │   └── [Other client-side script files]
+    ├── styles/
+    │   ├── common.css
+    │   └── style.css
+    └── views/
+        └── index.html
 ```
 markdown
 Copy code
