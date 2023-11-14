@@ -1,0 +1,4 @@
+.vscode/
+node_moudules/
+package-lock.json
+.gitignore
