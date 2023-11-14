@@ -46,3 +46,18 @@ function addTask() {
     console.error('일정 추가가 불가능합니다.')
   }
 }
+
+// 일정 완료 처리하는 함수
+function completeTask(taskText) {
+  // taskText를 가진 일정을 찾아서 isCompleted 상태를 토글
+  const taskIndex = tasks.findIndex(task => task.text === taskText);
+
+  // 배열에 없는 경우인 findIndex가 -1인 경우를 제외하고 로직 작성
+  if (taskIndex !== -1) { 
+    // 해당 인덱스의 일정 상태를 토글
+    tasks[taskIndex].isCompleted = !tasks[taskIndex].isCompleted;
+  }
+
+  // 변경된 상태로 일정 목록을 다시 표시
+  displayTasks();
+}
