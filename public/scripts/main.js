@@ -61,3 +61,41 @@ function completeTask(taskText) {
   // 변경된 상태로 일정 목록을 다시 표시
   displayTasks();
 }
+
+// 일정 목록 표시하는 함수
+function displayTasks() {
+  const taskList = document.getElementById('taskList');
+  
+  // 배열의 각 일정에 대해 li 요소와 span 요소 생성
+  tasks.forEach((task, index) => {
+    const taskItem = document.createElement('li');
+
+    // 체크박스 생성
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox'; // <input type="checkbox">
+    checkbox.checked = task.isCompleted;
+
+    // 체크박스 변경 이벤트에 핸들러 등록
+    checkbox.onchange = function () {
+      completeTask(task.text);
+    };
+
+    // span에 taskText 내용 추가
+    const taskSpan = document.createElement('span');
+    // task로 등록한 이름을 라벨링
+    taskSpan.innerHTML = `
+    <label>${task.text}</label>
+  `;
+
+
+    // 체크박스와 span을 li에 추가
+    taskItem.appendChild(checkbox);
+    taskItem.appendChild(taskSpan);
+    taskList.appendChild(taskItem);
+
+    // isCompleted 상태에 따라 취소선 적용
+    if (task.isCompleted) {
+      taskSpan.style.textDecoration = 'line-through';
+    }
+  });
+}
