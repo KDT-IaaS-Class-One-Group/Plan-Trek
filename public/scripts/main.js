@@ -61,6 +61,9 @@ function completeTask(taskIndex) {
 // 일정 목록 표시하는 함수
 function displayTasks() {
   const taskList = document.getElementById('taskList');
+
+  // 기존 목록 모두 지우기
+  taskList.innerHTML = '';
   
   // 배열의 각 일정에 대해 li 요소와 span 요소 생성
   tasks.forEach((task, index) => {
@@ -73,7 +76,7 @@ function displayTasks() {
 
     // 체크박스 변경 이벤트에 핸들러 등록
     checkbox.onchange = function () {
-      completeTask(task.text);
+      completeTask(index);
     };
 
     // span에 taskText 내용 추가
