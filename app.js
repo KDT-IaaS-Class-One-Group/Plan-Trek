@@ -7,6 +7,9 @@ const path = require('path');
 // 정적 파일을 제공하기 위한 미들웨어 설정
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
+// 정적 파일 제공을 위한 미들웨어 추가
+app.use('/public/models', express.static(path.join(__dirname, '..', 'models')));
+
 // routes/route.js 파일을 사용하여 라우팅 설정
 const route = require('./routes/route');
 app.use('/', route);
